@@ -3,34 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style src=""></style>
-    <title>KEATON</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <title>Keaton Maki</title>
 </head>
 <body>
-    <h1>Keaton Maki's Personal Site &#128511;</h1>
-    <hr/>
-    <h2>Links</h2>
-    <ul>
-        <li><a href="https://x.com/keatongm" target="_blank">
-            The site formerly known as "Twitter"
-        </a></li>
-        <li><a href="https://krooton.itch.io/" target="_blank">Itch.io</a></li>
-        <li><a href="https://github.com/krooton" target="_blank">GitHub</a></li>
-        <li><a href="https://www.linkedin.com/in/keaton-maki/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://soundcloud.com/neutral_air" target="_blank">Soundcloud</a></li>
-        <li><a href="https://www.twitch.tv/kr00ton" target="_blank">Twitch</a></li>
-    </ul>
-    <h2>Projects</h2>
-    <ul>
-        <li><a 
-            href="https://arcs.center/citizen-science-for-dakota-and-lakota-nations/" 
-            target="_blank"
-            >
-            Citizen Science for Dakota and Lakota Nations
-        </a></li>
-        <li><a href="https://krooton.itch.io/eel" target="_blank">Eel</a></li>
-        <li><a href="projects/gameoflife.html">Game of Checkboxes</a></li>
-    </ul>
-    <p>&#128511;</p>
+    <header class="header">
+        <h1>Keaton Maki</h1>
+        <a class="navlink" data-easing="linear" href="#about">About</a>
+        <a class="navlink" data-easing="linear" href="#links">Links</a>
+        <a class="navlink" data-easing="linear" href="#projects">Projects</a>
+    </header>
+        <div class="container">
+            
+            <div class="item">
+                <h2 id="about">About</h2>
+                <img src="images/iceland.jpg" alt="Me in Iceland"></img>
+                <p>Hello, my name is Keaton Maki.</p>
+                <p>I am a Computer Science student currently in my last semester at CSUN.</p>
+            </div>
+            <div class="item">
+                <h2 id="links">Links</h2>
+                <ul>
+                    <li><a href="https://x.com/keatongm" target="_blank">
+                        The site formerly known as "Twitter"
+                    </a></li>
+                    <li><a href="https://krooton.itch.io/" target="_blank">Itch.io</a></li>
+                    <li><a href="https://github.com/krooton" target="_blank">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/in/keaton-maki/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://soundcloud.com/neutral_air" target="_blank">Soundcloud</a></li>
+                    <li><a href="https://www.twitch.tv/kr00ton" target="_blank">Twitch</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <h2 id="projects">Projects</h2>
+                <ul>
+                    <li><a
+                        href="https://arcs.center/citizen-science-for-dakota-and-lakota-nations/"
+                        target="_blank"
+                        >
+                        Citizen Science for Dakota and Lakota Nations
+                    </a></li>
+                    <li><a href="https://krooton.itch.io/eel" target="_blank">Eel</a></li>
+                    <li><a href="projects/gameoflife.html">Game of Checkboxes</a></li>
+                </ul>
+            </div>
+        </div>
 </body>
+<footer>
+    <script>
+        var linear = new SmoothScroll('[data-easing="linear"]', {easing: 'linear'});
+    </script>
+</footer>
 </html>
