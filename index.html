@@ -1,161 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game of Life</title>
-    <!-- <link rel="icon" type="image/x-icon" href="/images/checkbox.png"> -->
-    <style>
-        button {
-            margin-top: 10px;
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-
-        .cell {
-            accent-color: hsl(0, 100%, 50%);
-        }
-
-        .element {
-            max-width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-            align-items: center;
-            text-align: center;
-        }
-
-        #grid {
-            white-space: nowrap;
-        }
-    </style>
-    <!-- <script src="src.js"></script> -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="./images/fivehead.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Keaton Maki</title>
 </head>
-
 <body>
-    <div class="element">
-        <h1>Conway's Game of Checkboxes</h1>
-        <div id="grid">
+    <header class="header" id="top">
+        <h1>Keaton Maki</h1>
+        <a class="navlink" data-easing="linear" href="#">About Me</a>
+        <a class="navlink" data-easing="linear" href="#skills">Skills</a>
+        <!-- <a class="navlink">Featured</a> -->
+        <a class="navlink" data-easing="linear" href="#projects">Projects</a>
+    </header>
+    <div class="container">
+        <div class="item" id="about" style="text-align: end;">
+            <img src="images/iceland.jpg" alt="Me in Iceland"></img>
+            <h2 id="about">About Me</h2>
+            <p>Hello there, welcome to my page.</p>
+            <p>
+                My name is Keaton Maki. I'm a computer science major currently going to CSUN
+                for my Bachelor's Degree and expected to graduate in Spring 2025.
+            </p>
+            <p>
+                I love my girlfriend, coding, traveling, my dogs, occasionally making sh*tty music,
+                playing guitar, and learning new skills :]
+            </p>
+            <a href="https://x.com/keatongm"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://github.com/krooton"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/keaton-maki/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://soundcloud.com/neutral_air"><i class="fa-brands fa-soundcloud"></i></a>
+            <a href="https://www.twitch.tv/kr00ton"><i class="fa-brands fa-twitch"></i></a>
+            <a href="https://krooton.itch.io/"><i class="fa-brands fa-itch-io"></i></a>
         </div>
-        <button id="start">Start</button>
-        <button id="step">Step</button>
-        <button id="clear">Clear</button>
-        <h2>Rules</h2>
-        <p>1. Any live cell with fewer than two live neighbours dies, as if by underpopulation.</p>
-        <p>2. Any live cell with two or three live neighbours lives on to the next generation.</p>
-        <p>3. Any live cell with more than three live neighbours dies, as if by overpopulation.</p>
-        <p>4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</p>
-        <h2>More Info:</h2>
-        <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Wikipedia</a>
+        <div class="item" id="skills">
+            <h2>Skills</h2>
+            <p>Languages I've used</p>
+            <a class="icon-text">
+                <i class="fa-brands fa-js"></i>
+                <p>JavaScript / TypeScript</p>
+                <i class="fa-brands fa-java"></i>
+                <p>Java</p>
+                <i class="fa-brands fa-python"></i>
+                <p>Python</p>
+                <i class="fa-brands fa-php"></i>
+                <p>PHP</p>
+                <i class="fa-brands fa-html5"></i>
+                <p>HTML</p>
+                <i class="fa-brands fa-css3"></i>
+                <p>CSS</p>
+                <i class="fa-brands fa-r"></i>
+                <p>R</p>
+                <i class="fa-brands fa-c"></i>
+                <p>C Sharp</p>
+                <i class="fa-brands fa-c"></i>
+                <p>C</p>
+            </a>
+            <p>Libraries / Frameworks</p>
+            <a class="icon-text">
+                <i class="fa-brands fa-react"></i>
+                <p>React / React Native</p>
+                <i class="fa-brands fa-bootstrap"></i>
+                <p>Bootstrap</p>
+                <i class="fa-brands fa-p"></i>
+                <p>Pandas</p>
+                <i class="fa-brands"></i>
+                <i class="fa-brands"></i>
+                <i class="fa-brands fa-t"></i>
+                <p>TensorFlow</p>
+                <i class="fa-brands fa-e"></i>
+                <p>Express</p>
+            </a>
+            <p>Databases</p>
+            <a class="icon-text">
+                <i class="fa-brands fa-m"></i>
+                <p>MySQL</p>
+                <i class="fa-brands fa-p"></i>
+                <p>PostgreSQL</p>
+            </a>
+        </div>
+        
+        <div class="item" id="projects" style="text-align: end;">
+            <h2 style="margin-bottom: 25px;">Projects</h2>
+            <img src="./images/eel.png" alt="Eel"></img>
+            <div>
+                <a href="https://krooton.itch.io/eel" target="_blank" style="height: 100px">Eel</a>
+                <p>My twist on the classic game snake. Made using Unity and coded in C#.</p>
+            </div>
+            <div style="margin-top: 150px">
+                <img src="./images/gameoflife.png" alt="Game of life" style="width: 250px; height: 190px;"></img>
+                <a href="projects/gameoflife.html" style="padding-top: 50px;">Game of Checkboxes</a>
+                <p>
+                    My version of Conway's Game of Life where I use html checkboxes for
+                    the cells. Created using JavaScript and html.
+                </p>
+            </div>
+            <!-- <a
+                    href="https://arcs.center/citizen-science-for-dakota-and-lakota-nations/"
+                    target="_blank"
+                    >
+                    Citizen Science for Dakota and Lakota Nations
+                </a> -->
+        </div>
     </div>
+    <!-- <p>
+        .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
+        .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
+        .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.
+        .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
+        .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
+        .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.
+        .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
+        .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
+        .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.
+    </p> -->
 </body>
-<script>
-    const rows = 25;
-    const cols = 50;
-    let hue = 0;
-    let running = false;
-    let intervalId = null;
-
-    document.getElementById("start").onclick = handleStart;
-    document.getElementById("clear").onclick = handleClear;
-    document.getElementById("step").onclick = handleStep;
-
-    function handleClear() {
-        for (let i = 0; i < rows; i++) {
-            for (let j = 0; j < cols; j++) {
-                let cellId = `cell-${i}-${j}`;
-                document.getElementById(cellId).checked = false;
-            }
-        }
-    }
-
-    function handleStart() {
-        running = !running;
-
-        document.getElementById("start").innerHTML = running ? "Stop" : "Start";
-        document.getElementById("step").disabled = running;
-
-        if (running) {
-            intervalId = setInterval(run, 200); // Runs every 100ms
-        } else {
-            clearInterval(intervalId);
-            intervalId = null;
-        }
-    }
-
-    function handleStep() {
-        run();
-    }
-
-    function run() {
-
-        hue += 1;
-
-        // Initialize the next generation grid
-        let nextGrid = Array.from({ length: rows }, () => Array(cols).fill(false));
-
-        // Calculate the next state for each cell
-        for (let i = 0; i < rows; i++) {
-            for (let j = 0; j < cols; j++) {
-                let neighbors = nCount(i, j);
-                let cellId = `cell-${i}-${j}`;
-                let checked = document.getElementById(cellId).checked;
-
-                // Apply Conway's Game of Life rules
-                if (checked) {
-                    nextGrid[i][j] = neighbors === 2 || neighbors === 3;
-                } else {
-                    nextGrid[i][j] = neighbors === 3;
-                }
-            }
-        }
-
-        // Update the DOM to reflect the next state
-        for (let i = 0; i < rows; i++) {
-            for (let j = 0; j < cols; j++) {
-                let cellId = `cell-${i}-${j}`;
-                let cell = document.getElementById(cellId);
-                cell.style.setProperty("accent-color", `hsl(${hue}, 100%, 50%)`);
-                cell.checked = nextGrid[i][j];
-            }
-        }
-    }
-
-    function nCount(x, y) {
-        let count = 0;
-
-        for (let i = -1; i <= 1; i++) {
-            for (let j = -1; j <= 1; j++) {
-                // Skip the current cell
-                if (i === 0 && j === 0) continue;
-
-                // Calculate neighbor coordinates
-                let ni = (x + i + rows) % rows;
-                let nj = (y + j + cols) % cols;
-
-                // Check bounds to avoid out-of-range errors
-                if (ni >= 0 && nj >= 0 && ni < rows && nj < cols) {
-                    // Compute cell ID and check state
-                    let cellId = `cell-${ni}-${nj}`;
-                    let cell = document.getElementById(cellId);
-                    if (cell && cell.checked) {
-                        count++;
-                    }
-                }
-            }
-        }
-
-        return count;
-    }
-
-    for (let i = 0; i < rows; i++) {
-        var rowname = "row" + i;
-        document.getElementById("grid").innerHTML += `<div class="cell" id=${rowname}></div>`;
-        for (let j = 0; j < cols; j++) {
-            document.getElementById(rowname).innerHTML += `<input type="checkbox" id="cell-${i}-${j}">`;
-        }
-    }
-
-</script>
-
+<footer>
+    <script>
+        var scroll = new SmoothScroll('a[data-easing="linear"]', {
+        speed: 800, // Adjust speed if needed
+        offset: document.querySelector('.header').offsetHeight,
+        easing: 'linear',
+        updateURL: false, // Prevents changing the URL hash
+    });
+    </script>
+</footer>
 </html>

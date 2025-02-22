@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+    <!-- <link rel="icon" type="image/x-icon" href="/images/checkbox.png"> -->
+    <style>
+        button {
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        .cell {
+            accent-color: hsl(0, 100%, 50%);
+        }
+
+        .element {
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;
+            text-align: center;
+        }
+
+        #grid {
+            white-space: nowrap;
+        }
+    </style>
+    <!-- <script src="src.js"></script> -->
+</head>
+
+<body>
+    <div class="element">
+        <h1>Conway's Game of Checkboxes</h1>
+        <div id="grid">
+        </div>
+        <button id="start">Start</button>
+        <button id="step">Step</button>
+        <button id="clear">Clear</button>
+        <h2>Rules</h2>
+        <p>1. Any live cell with fewer than two live neighbours dies, as if by underpopulation.</p>
+        <p>2. Any live cell with two or three live neighbours lives on to the next generation.</p>
+        <p>3. Any live cell with more than three live neighbours dies, as if by overpopulation.</p>
+        <p>4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.</p>
+        <h2>More Info:</h2>
+        <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Wikipedia</a>
+        <h2>Links</h2>
+        <a href="https://github.com/krooton/Game-of-Checkboxes">GitHub</a>
+        <a href="https://krooton.github.io/">My Website</a>
+    </div>
+</body>
+<script>
+    const rows = 25;
+    const cols = 50;
+    let hue = 0;
+    let running = false;
+    let intervalId = null;
+
+    document.getElementById("start").onclick = handleStart;
+    document.getElementById("clear").onclick = handleClear;
+    document.getElementById("step").onclick = handleStep;
+
+    function handleClear() {
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                let cellId = `cell-${i}-${j}`;
+                document.getElementById(cellId).checked = false;
+            }
+        }
+    }
+
+    function handleStart() {
+        running = !running;
+
+        document.getElementById("start").innerHTML = running ? "Stop" : "Start";
+        document.getElementById("step").disabled = running;
+
+        if (running) {
+            intervalId = setInterval(run, 200); // Runs every 100ms
+        } else {
+            clearInterval(intervalId);
+            intervalId = null;
+        }
+    }
+
+    function handleStep() {
+        run();
+    }
+
+    function run() {
+
+        hue += 1;
+
+        // Initialize the next generation grid
+        let nextGrid = Array.from({ length: rows }, () => Array(cols).fill(false));
+
+        // Calculate the next state for each cell
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                let neighbors = nCount(i, j);
+                let cellId = `cell-${i}-${j}`;
+                let checked = document.getElementById(cellId).checked;
+
+                // Apply Conway's Game of Life rules
+                if (checked) {
+                    nextGrid[i][j] = neighbors === 2 || neighbors === 3;
+                } else {
+                    nextGrid[i][j] = neighbors === 3;
+                }
+            }
+        }
+
+        // Update the DOM to reflect the next state
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+                let cellId = `cell-${i}-${j}`;
+                let cell = document.getElementById(cellId);
+                cell.style.setProperty("accent-color", `hsl(${hue}, 100%, 50%)`);
+                cell.checked = nextGrid[i][j];
+            }
+        }
+    }
+
+    function nCount(x, y) {
+        let count = 0;
+
+        for (let i = -1; i <= 1; i++) {
+            for (let j = -1; j <= 1; j++) {
+                // Skip the current cell
+                if (i === 0 && j === 0) continue;
+
+                // Calculate neighbor coordinates
+                let ni = (x + i + rows) % rows;
+                let nj = (y + j + cols) % cols;
+
+                // Check bounds to avoid out-of-range errors
+                if (ni >= 0 && nj >= 0 && ni < rows && nj < cols) {
+                    // Compute cell ID and check state
+                    let cellId = `cell-${ni}-${nj}`;
+                    let cell = document.getElementById(cellId);
+                    if (cell && cell.checked) {
+                        count++;
+                    }
+                }
+            }
+        }
+
+        return count;
+    }
+
+    for (let i = 0; i < rows; i++) {
+        var rowname = "row" + i;
+        document.getElementById("grid").innerHTML += `<div class="cell" id=${rowname}></div>`;
+        for (let j = 0; j < cols; j++) {
+            document.getElementById(rowname).innerHTML += `<input type="checkbox" id="cell-${i}-${j}">`;
+        }
+    }
+
+</script>
+
+</html>
