@@ -1,0 +1,3 @@
+[submodule "krooton.github.io"]
+    path = krooton.github.io
+    url = https://github.com/krooton/krooton.github.io.git
