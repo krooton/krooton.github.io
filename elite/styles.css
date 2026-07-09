@@ -166,7 +166,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    padding-top: 25vh;
+    padding-top: 20vh;
     padding-left: 25vw;
 }
 
@@ -310,7 +310,7 @@ h3{
 }
 
 p{
-    font-size: 32px;
+    font-size: 24px;
     font-family: "Trebuchet MS", Arial, sans-serif;
     line-height: 2.0;
     max-width: 1200px;
@@ -343,7 +343,7 @@ p{
     border: 1px solid #555;
     padding: 10px;
     font-size: 30px;
-    text-align: left;
+    text-align: center;
     width: auto;
     max-width: 250px;
     /* height: 200px; */
@@ -686,7 +686,7 @@ input[type=submit]:hover{
     }
 
     #contactUs{
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
@@ -710,7 +710,7 @@ input[type=submit]:hover{
 
     #certs img{
         width: 300px;
-        height: 150px;
+        /* height: 150px; */
     }
 
     p {
