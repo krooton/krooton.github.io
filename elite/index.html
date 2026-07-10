@@ -18,16 +18,26 @@
             </video>
         </a>
     </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a data-easing="linear" href="#bg1" class="navlink">our work</a>
+        <a data-easing="linear" href="#bg2" class="navlink">services</a>
+        <a data-easing="linear" href="#bg3" class="navlink">clients</a>
+        <a data-easing="linear" href="#bg4" class="navlink">about us</a>
+        <a data-easing="linear" href="#bg5" class="navlink">certifications</a>
+        <a data-easing="linear" href="#bg6" class="navlink">contact</a>
+    </div>
      <div class="header">
         <a data-easing="linear" id="runner" href="#introVideo">
             <img src="images/runner.png" alt="EMT Logo" width="201" height="51">
         </a>
-        <a data-easing="linear" href="#bg1">our work</a>
-        <a data-easing="linear" href="#bg2">services</a>
-        <a data-easing="linear" href="#bg3">clients</a>
-        <a data-easing="linear" href="#bg4">about us</a>
-        <a data-easing="linear" href="#bg5">certifications</a>
-        <a data-easing="linear" href="#bg6">contact</a>
+        <a data-easing="linear" href="#bg1" class="navlink">our work</a>
+        <a data-easing="linear" href="#bg2" class="navlink">services</a>
+        <a data-easing="linear" href="#bg3" class="navlink">clients</a>
+        <a data-easing="linear" href="#bg4" class="navlink">about us</a>
+        <a data-easing="linear" href="#bg5" class="navlink">certifications</a>
+        <a data-easing="linear" href="#bg6" class="navlink">contact</a>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <!-- <a></p><i class="fa-solid fa-bars"></i> Menu</a> -->
     </div>
     <div class="bg" id="bg1">
@@ -65,7 +75,7 @@
                         <img src="images/icons/qc.png" alt="Color" width="100">
                         <h3>Quality Control</h3>
                     </div>
-                    <p>Global Mastering QC, Deliverable Validation, PSE & Compliance.</p>
+                    <p class="description">Global Mastering QC, Deliverable Validation, PSE & Compliance</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -73,7 +83,7 @@
                         <img src="images/icons/color.png" alt="Security" width="100">
                         <h3>Fulfillment & Distribution</h3>
                     </div>
-                    <p>End-to-End Servicing, Content Security, Metadata Creation, Packaging & Delivery.</p>
+                    <p class="description">End-to-End Servicing, Content Security, Metadata Creation, Packaging & Delivery</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -81,7 +91,7 @@
                         <img src="images/icons/encoding.png" alt="Delivery" width="100">
                         <h3>Transcoding / Encoding</h3>
                     </div>
-                    <p>IMF, DCP, VOD, SVOD, OTT, Broadcast Deliverables, Conversions.</p>
+                    <p class="description">IMF, DCP, VOD, SVOD, OTT, Broadcast Deliverables, Conversions</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -89,7 +99,7 @@
                         <img src="images/icons/global.png" alt="Color" width="100">
                         <h3>Global Formatting & Conformance</h3>
                     </div>
-                    <p>Global Localization Conform, Conversion, Compliance & Technical Processing Services.</p>
+                    <p class="description">Global Localization Conform, Conversion, Compliance & Technical Processing Services</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -97,7 +107,7 @@
                         <img src="images/icons/color.png" alt="Color" width="100">
                         <h3>Marketing Design & Versioning</h3>
                     </div>
-                    <p>Trailers, Promos, Spots, and Global Versioning.</p>
+                    <p class="description">Trailers, Promos, Spots, & Global Versioning</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -105,7 +115,7 @@
                         <img src="images/icons/color.png" alt="Color" width="100">
                         <h3>Localization Support Services</h3>
                     </div>
-                    <p>Scripts, Transcripts, Localization Reports, Subtitle Burn-In, Dub Card Creation.</p>
+                    <p class="description">Scripts, Transcripts, Localization Reports, Subtitle Burn-In, Dub Card Creation</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -113,7 +123,7 @@
                         <img src="images/icons/security.png" alt="Security" width="100">
                         <h3>Content Security & Asset Management</h3>
                     </div>
-                    <p>Secure, High-Speed File Delivery, Archiving, and Content Management Services</p>
+                    <p class="description">Secure, High-Speed File Delivery, Archiving, & Content Management Services</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -121,7 +131,7 @@
                         <img src="images/icons/mastering.png" alt="Color" width="100">
                         <h3>Mastering</h3>
                     </div>
-                    <p>Global Mastering, Color Correction, SDR, HDR-10, Dolby Vision from HD to 8K & Beyond.</p>
+                    <p class="description">Global Mastering, Color Correction, SDR, HDR-10, Dolby Vision from HD to 8K & Beyond</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -129,7 +139,7 @@
                         <img src="images/icons/editorial.png" alt="Color" width="100">
                         <h3>Creative Picture</h3>
                     </div>
-                    <p>Editorial, Graphics & Conform.</p>
+                    <p class="description">Editorial, Graphics & Conform</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -137,7 +147,7 @@
                         <img src="images/icons/sound.png" alt="Color" width="100">
                         <h3>Creative Sound</h3>
                     </div>
-                    <p>Dolby Atmos Object Based Sound, QC, Remix, Edit, Conform.</p>
+                    <p class="description">Dolby Atmos Object Based Sound, QC, Remix, Edit, Conform</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -145,7 +155,7 @@
                         <img src="images/icons/restoration.png" alt="Color" width="100">
                         <h3>Restoration</h3>
                     </div>
-                    <p>Picture & Sound Restoration Services</p>
+                    <p class="description">Picture & Sound Restoration Services</p>
                 </div>
                 <div class="service-card">
                     <div class="service-title">
@@ -153,7 +163,7 @@
                         <img src="images/icons/color.png" alt="Color" width="100">
                         <h3>Systems Integration Services</h3>
                     </div>
-                    <p>Engineering, Workflow Design, Development & Consulting</p>
+                    <p class="description">Engineering, Workflow Design, Development & Consulting</p>
                 </div>
             </div>
         </div>

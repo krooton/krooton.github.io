@@ -249,6 +249,7 @@ let topBtn = document.getElementById("topBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
+  closeNav();
   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
     topBtn.style.display = "block";
   } else {
@@ -308,3 +309,11 @@ window.onload = function() {
         // Reset the form fields when the page loads
         document.getElementById("form").reset();
     };
+
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}

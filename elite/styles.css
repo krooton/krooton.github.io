@@ -173,6 +173,40 @@ body {
     padding-top: 30px;
 }
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 .header{
     position: sticky;
     top: 0;
@@ -199,18 +233,26 @@ header p {
     margin: 0;
 }
 
-.header a {
+.header .navlink {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    transition: 0.3s;
     color: white;
     text-decoration: none;
+}
+
+.header a {
     padding: 5px 15px;
     border-radius: 4px;
     cursor: pointer;
-    transition: 0.3s;
-    font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
 .header a:hover {
     color: rgba(255, 255, 255, 0.2);
+}
+
+.header span {
+    color: white;
+    display: none;
 }
 
 hr {
@@ -295,6 +337,7 @@ p{
     height: auto;
     border-radius: 5%;
     background-color: black;
+    transition: 0.3s;
 }
 
 .service-card:hover{
@@ -313,6 +356,11 @@ p{
     /* gap: 1em; */
     /* margin: 0.1em; */
     /* height: 50px; */
+}
+
+.description {
+    text-align: center;
+    width: 100%;
 }
 
 .collapsible {
@@ -345,6 +393,10 @@ p{
 
 .hidden p{
     font-size: 18px;
+}
+
+.hidden span {
+    display: none;
 }
 
 .collapsible:after {
@@ -568,11 +620,7 @@ input[type=submit]:hover{
     background-color: rgba(121, 38, 40, 1);
 }
 
-@media only screen and (max-width: 768px) {
-    body {
-        /* padding-top: 112px; */
-    }
-
+@media only screen and (max-width: 1100px){
     .header {
         flex-wrap: wrap;
         justify-content: center;
@@ -592,29 +640,17 @@ input[type=submit]:hover{
     .header a {
         padding: 6px 10px;
     }
+}
 
-    /* .owl-carousel iframe {
-        width: 100% !important;
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-    } */
+@media only screen and (max-width: 768px) {
 
-    /* #bg2 .overlay {
-        position: relative;
-        height: auto;
-        min-height: 100vh;
-        width: 100%;
-    } */
+    .header .navlink {
+        display: none;
+    }
 
-    /* #bg2 .content {
-        position: relative;
-        height: auto;
-        min-height: auto;
-        justify-content: flex-start;
-        gap: 16px;
-        padding-bottom: 20px;
-    } */
+    .header span {
+        display: initial;
+    }
 
     #bg2 .services {
         grid-template-columns: 1fr;
