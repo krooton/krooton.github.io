@@ -108,6 +108,13 @@ body {
     background-image: url('images/certs.JPG');
 }
 
+#bg5 h2 {
+    color: black;
+}
+#bg5 hr {
+    background-color: black !important;
+}
+
 #bg5-overlay {
     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
 }
@@ -117,8 +124,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    padding-top: 20vh;
-    padding-left: 25vw;
+    padding-top: 20px;
+    padding-right: 25vw;
+    text-align: center;
 }
 
 #bg6 {
@@ -139,6 +147,10 @@ body {
     background-size: cover;
     /* background-attachment: fixed; */
     position: relative;
+}
+
+.bg hr {
+    background-color: white;
 }
 
 .overlay {
@@ -265,7 +277,7 @@ header p {
 hr {
     border: 0;
     height: 2px;
-    background-color: white;
+    /* background-color: white; */
     width: 80%;
     max-width: 1200px;
 }
