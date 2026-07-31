@@ -530,8 +530,8 @@ p{
     display: none;
     position: fixed;
     z-index: 99;
-    bottom: 150px;
-    right: 30px;
+    bottom: 75px;
+    right: 10px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255);
     background-image: url('images/arrow.svg');

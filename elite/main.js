@@ -268,3 +268,11 @@ if (introVideo && intro) {
     introVideo.addEventListener('loadedmetadata', syncIntroSize);
     window.addEventListener('load', syncIntroSize);
 }
+
+window.addEventListener('CookiebotOnAccept', function () {
+    document.querySelectorAll('iframe[src*="youtube"]').forEach(function(iframe) {
+        const src = iframe.src;
+        iframe.src = '';
+        iframe.src = src;
+    });
+});
