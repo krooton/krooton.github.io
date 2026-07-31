@@ -250,3 +250,11 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+
+// const video = document.querySelector('#introVideo');
+// const container = document.querySelector('#intro');
+
+// video.addEventListener('loadedmetadata', () => {
+//   container.style.width = `${video.videoWidth}px`;
+//   container.style.height = `${video.videoHeight}px`;
+// });
