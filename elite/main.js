@@ -251,10 +251,20 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
-// const video = document.querySelector('#introVideo');
-// const container = document.querySelector('#intro');
+const introVideo = document.getElementById('introVideo');
+const intro = document.getElementById('intro');
 
-// video.addEventListener('loadedmetadata', () => {
-//   container.style.width = `${video.videoWidth}px`;
-//   container.style.height = `${video.videoHeight}px`;
-// });
+if (introVideo && intro) {
+    const syncIntroSize = () => {
+        if (introVideo.videoWidth && introVideo.videoHeight) {
+            intro.style.aspectRatio = `${introVideo.videoWidth} / ${introVideo.videoHeight}`;
+        }
+    };
+
+    if (introVideo.readyState >= 1) {
+        syncIntroSize();
+    }
+
+    introVideo.addEventListener('loadedmetadata', syncIntroSize);
+    window.addEventListener('load', syncIntroSize);
+}
